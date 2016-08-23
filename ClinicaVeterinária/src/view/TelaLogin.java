@@ -29,6 +29,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
         jTextLogin = new javax.swing.JTextField();
         jTextSenha = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jlSenha = new javax.swing.JLabel();
         jlLogin = new javax.swing.JLabel();
@@ -41,6 +42,15 @@ public class TelaLogin extends javax.swing.JFrame {
         getContentPane().add(jTextSenha);
         jTextSenha.setBounds(320, 100, 110, 30);
 
+        jButton1.setText("Acessar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(340, 150, 71, 23);
+
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 102, 102));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -50,11 +60,11 @@ public class TelaLogin extends javax.swing.JFrame {
 
         jlSenha.setText("Senha: ");
         getContentPane().add(jlSenha);
-        jlSenha.setBounds(270, 110, 60, 16);
+        jlSenha.setBounds(270, 110, 60, 14);
 
         jlLogin.setText("Login: ");
         getContentPane().add(jlLogin);
-        jlLogin.setBounds(270, 80, 37, 16);
+        jlLogin.setBounds(270, 80, 32, 14);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fundoLogin.jpg"))); // NOI18N
         jLabel1.setText("Senha");
@@ -64,6 +74,10 @@ public class TelaLogin extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(516, 237));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -101,6 +115,7 @@ public class TelaLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jTextLogin;
