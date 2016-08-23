@@ -29,6 +29,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
         jTextLogin = new javax.swing.JTextField();
         jTextSenha = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jlSenha = new javax.swing.JLabel();
         jlLogin = new javax.swing.JLabel();
@@ -40,6 +41,10 @@ public class TelaLogin extends javax.swing.JFrame {
         jTextLogin.setBounds(320, 70, 110, 30);
         getContentPane().add(jTextSenha);
         jTextSenha.setBounds(320, 100, 110, 30);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo-login.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 270, 200);
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 102, 102));
@@ -103,6 +108,7 @@ public class TelaLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField jTextLogin;
     private javax.swing.JTextField jTextSenha;
     private javax.swing.JLabel jlLogin;
