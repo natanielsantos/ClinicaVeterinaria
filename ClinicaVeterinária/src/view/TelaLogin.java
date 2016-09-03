@@ -83,7 +83,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         user = "admin";
-        senha = "13";
+        senha = "1234";
         String senhaString = new String(jSenha.getPassword());
         if((jTextLogin.getText().equals(user)) && (senhaString.equals(senha))) {
             telaMenu tm = new telaMenu();

@@ -58,7 +58,7 @@ public class telaCadastroCliente extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tempus Sans ITC", 0, 14)); // NOI18N
         jLabel9.setText("Estado");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -279,7 +279,8 @@ public class telaCadastroCliente extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(829, 465));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBoxQuantidadeAnimaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxQuantidadeAnimaisActionPerformed
