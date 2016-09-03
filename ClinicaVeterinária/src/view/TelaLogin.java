@@ -5,15 +5,16 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author nataniel
  */
 public class TelaLogin extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaLogin
-     */
+    private String user, senha;
+    
     public TelaLogin() {
         initComponents();
     }
@@ -27,8 +28,9 @@ public class TelaLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jToggleButton1 = new javax.swing.JToggleButton();
+        jSenha = new javax.swing.JPasswordField();
         jTextLogin = new javax.swing.JTextField();
-        jTextSenha = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jlSenha = new javax.swing.JLabel();
@@ -37,10 +39,19 @@ public class TelaLogin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        jToggleButton1.setText("ENTRAR");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jToggleButton1);
+        jToggleButton1.setBounds(340, 150, 80, 32);
+        getContentPane().add(jSenha);
+        jSenha.setBounds(320, 102, 110, 30);
         getContentPane().add(jTextLogin);
         jTextLogin.setBounds(320, 70, 110, 30);
-        getContentPane().add(jTextSenha);
-        jTextSenha.setBounds(320, 100, 110, 30);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo-login.png"))); // NOI18N
         getContentPane().add(jLabel3);
@@ -70,47 +81,27 @@ public class TelaLogin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        user = "admin";
+        senha = "13";
+        String senhaString = new String(jSenha.getPassword());
+        if((jTextLogin.getText().equals(user)) && (senhaString.equals(senha))) {
+            telaMenu tm = new telaMenu();
+            tm.setVisible(true);
+            dispose();
+        } else {
+            JOptionPane.showMessageDialog(null, "Acesso NEGADO!");
         }
-        //</editor-fold>
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TelaLogin().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JPasswordField jSenha;
     private javax.swing.JTextField jTextLogin;
-    private javax.swing.JTextField jTextSenha;
+    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JLabel jlLogin;
     private javax.swing.JLabel jlSenha;
     // End of variables declaration//GEN-END:variables
